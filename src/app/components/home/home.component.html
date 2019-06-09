@@ -1,0 +1,21 @@
+<div class="home-box">
+  <div class="header-box">
+      <img src="./assets/image/dian.gif" alt="轮播图片" class="imgstyle">
+      <div class="bar">
+          <app-menubar [mendata]="mendata"></app-menubar>
+        <div>
+          <!-- 头像 -->
+          <app-portrait></app-portrait>
+        </div>
+      </div>
+  </div>
+   <!-- 广告1 -->
+  <div class="advertising-style">
+    <div class="advertising-tiem" (click)="quickorder()">
+        <img src="./assets/image/yijianxiadan.gif" alt="广告">
+    </div>
+    <div class="advertising-tiem">
+        <img src="./assets/image/dingzhi.gif" alt="广告">
+    </div>
+  </div>
+</div>

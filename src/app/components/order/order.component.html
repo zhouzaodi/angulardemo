@@ -1,0 +1,95 @@
+<div class="orderbox">
+  <div>
+    <div class="row">
+      <div class="minirow">
+        <img src="./assets/image/back.gif" alt="" class="it-right" (click)="goblack(index)">
+        <div>快速预约</div>
+      </div>
+    </div>
+    <div class="item-row" style="margin-top:16px;" >
+      <div class="item-row-min" (click)="btnselect(index)">
+        <div>
+          门店 ：{{inputdata.name}}
+        </div>
+        <div>
+          <span class="distance">{{inputdata.distance}}</span>
+          <img src="./assets/image/arrow.gif" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="item-row">
+      <div class="item-row-min">
+        <div>
+          泰式按摩休闲套餐120分钟
+        </div>
+        <img src="./assets/image/arrow.gif" alt="">
+      </div>
+    </div>
+    <div>
+      <div class="particulars">
+        查看项目详情
+      </div>
+    </div>
+    <div class="item-row" style="margin-top:24px;">
+      <div class="item-row-min">
+        <div>
+          时间 ： 19:00
+        </div>
+        <div>
+          <img src="./assets/image/arrow.gif" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="item-row">
+      <div class="item-row-min">
+        <div>
+          人数 ：
+        </div>
+        <div>
+          <div></div>
+        </div>
+        <ul class="ulstyle">
+          <li *ngFor="let item of list;let index= index" (click)="changeNum(index)" [ngClass]="{'hasBg': getindex==item}">
+            {{index+1}}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="item-row">
+      <div class="item-row-min">
+        <div>
+          技师 ：随机
+        </div>
+        <img src="./assets/image/arrow.gif" alt="">
+      </div>
+    </div>
+    <div>
+      <div class="quickstyle">
+        快速预约
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- 遮罩层 -->
+ <div class="bg-black" *ngIf="bglayer">
+    <div class="shaw-box">
+      <div class="selecttitle">选择门店</div>
+      <div class="content" *ngFor="let item of shopdata;let index= index">
+        <div class="hascircle"  [ngClass]="{'hascircle': shopNum==index, 'circle': shopNum!=index}" (click)="selectshop(index,item)">
+        </div>
+        <img src="{{item.url}}"  alt="店" class="contentimg">
+        <div class="contenttext">
+          <div class="shopname">{{item.name}}</div>
+          <div class="shopaddress">{{item.address}}</div>
+        </div>
+        <div>
+            <!-- *ngIf="list.length > 3" -->
+          <div class="record" *ngIf="item.record">上次去过</div>
+          <div class="record-count" *ngIf="!item.record">{{item.distance}}</div>
+        </div>
+      </div>
+      <div>
+        <div class="confirmstyle" (click)="confirm()">确认</div>
+      </div>
+    </div>
+ </div>

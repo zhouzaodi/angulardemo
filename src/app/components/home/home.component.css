@@ -1,0 +1,27 @@
+.home-box{
+  width: 100%;
+  /* background-color:#f2f2f2; */
+}
+.header-box{
+  background-color:#fff;
+}
+.imgstyle{
+  width: 100%;
+  height: 360px;
+}
+.bar{
+  display: flex;
+  justify-content:space-between;
+}
+.advertising-style{
+  margin-top:24px;
+}
+.advertising-tiem{
+  width: 640px;
+  height: 224px;
+  padding-bottom:16px;
+}
+.advertising-tiem img{
+  width: 640px;
+  height: 224px;
+}

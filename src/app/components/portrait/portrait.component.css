@@ -1,0 +1,29 @@
+p{
+  margin: 0;
+  padding: 0;
+}
+.menu-box{
+  width: 126px;
+  padding-top:16px;
+  display: flex;
+  justify-content: flex-end;
+  border-left:1px solid #dbdbdb;
+}
+.left-item{
+  flex-direction:column;
+  align-items: center;
+}
+.menu-item{
+  /* border:1px solid yellow; */
+  width: 64px;
+}
+.font{
+  padding-top:8px;
+}
+.right-item{
+ padding-left:8px;
+ padding-right:8px;
+ display: flex;
+ flex-direction:column;
+ justify-content: center;
+}
